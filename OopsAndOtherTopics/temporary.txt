@@ -1,0 +1,6 @@
+This folder contains topics like 
+--> pointer
+-->OOPS
+-->classes
+-->constructor and destructor
+-->Advanced topics(virtual pointer, templates, etc.)
