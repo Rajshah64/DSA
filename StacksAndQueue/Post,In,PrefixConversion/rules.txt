@@ -10,3 +10,7 @@ anything else will have the priority of -1
 Infix--> a+b
 Prefix-->+ab
 Postfix-->ab+
+
+
+
+all the postfix,infix, prefix type questions will not be asked in an interview . They are done to clear your concepts about stacks.
