@@ -1,0 +1,12 @@
+^ has maximum priority that is 3
+*,/ has a priority of 2
++,- has a priority of 1
+anything else will have the priority of -1
+
+
+
+
+
+Infix--> a+b
+Prefix-->+ab
+Postfix-->ab+
