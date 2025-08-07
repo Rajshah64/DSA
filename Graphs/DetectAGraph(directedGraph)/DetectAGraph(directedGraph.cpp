@@ -22,7 +22,7 @@ public:
     bool isCyclic(int V, vector<vector<int>>adj[]){
         int vis[V]={0};
         int pathVis[V]={0};
-
+        int 
         for(int i=0;i<V;i++){
             if(!vis[i]){
                 if(dfs(i, vis, pathVis, adj)) {
