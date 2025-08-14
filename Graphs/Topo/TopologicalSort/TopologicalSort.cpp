@@ -19,6 +19,7 @@ public:
     {
 
         vector<vector<int>> adj(V);
+        //adjacency list 
         for (int i = 0; i < edges.size(); i++)
         {
             adj[edges[i][0]].push_back(edges[i][1]);
