@@ -47,3 +47,40 @@ public:
         }
     }
 };
+
+// OR
+class Solution
+{
+public:
+    void deleteAllOccurOfX(struct Node **head_ref, int x)
+    {
+        Node *temp = *head_ref;
+
+        while (temp)
+        {
+            if (temp->data == x)
+            {
+                Node *nextNode = temp->next;
+                Node *prevNode = temp->prev;
+
+                // if deleting head
+                if (temp == *head_ref)
+                {
+                    *head_ref = nextNode;
+                }
+
+                if (nextNode != NULL)
+                    nextNode->prev = prevNode;
+                if (prevNode != NULL)
+                    prevNode->next = nextNode;
+
+                delete temp;
+                temp = nextNode;
+            }
+            else
+            {
+                temp = temp->next;
+            }
+        }
+    }
+};
