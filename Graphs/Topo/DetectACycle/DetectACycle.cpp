@@ -1,6 +1,7 @@
+
 // we have already solved this before that is to detect a cycle in a graph with the help of dfs .
 // But now we will do it with the help of bfs that is kahns algorithm .
-// The logic is if there is a cycle the final topo list wont have all the elements
+// The logic is if there is a cycle the final topo list wont have all the elements.
 // that is V!= topo.size()where V is the no .of nodes.
 
 class Solution
