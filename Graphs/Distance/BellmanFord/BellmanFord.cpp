@@ -47,3 +47,6 @@ public:
         return dist;
     }
 };
+
+// Generally not asked in an interview
+// but can be asked as a follow up question on djikstra that what if your graph contained negative weights.
