@@ -52,3 +52,7 @@ public:
         return XOR;
     }
 };
+
+//The brute force method is that we take an unordered map and then store the frequency of each of the elements. 
+//Then we iterate through the map and return the element which has a frequency of 1.
+//But that takes more time and also more space . 
