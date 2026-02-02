@@ -95,3 +95,9 @@ public:
         return maxLen;
     }
 };
+// Time Complexity : O(2N) as in worst case each element is visited twice
+// Space Complexity : O(1)
+// This approach uses two pointers to maintain a sliding window's sum
+// We expand the window by moving the right pointer and adding elements to the sum
+// If the sum exceeds k, we shrink the window from the left by moving the left pointer
+// If the sum equals k, we update the maxLen accordingly
