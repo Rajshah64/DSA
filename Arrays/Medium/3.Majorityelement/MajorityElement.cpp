@@ -42,7 +42,7 @@
 // Time Complexity:- O(nlogn)
 // Space Complexity:- O(1)
 
-// Boyer Moore Algorithm
+// Boyer Moore Voting Algorithm
 class Solution
 {
 public:
@@ -63,4 +63,4 @@ public:
     }
 };
 // Time Complexity:- O(n)
-// Space Complexity:- O(n)
+// Space Complexity:- O(1)
