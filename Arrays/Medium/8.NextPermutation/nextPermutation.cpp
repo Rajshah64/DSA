@@ -11,15 +11,17 @@ public:
         {
             i--;
         }
+
         if (i >= 0)
         {
             int j = n - 1;
-            while (nums[j] <= nums[i])
+            while (j > i && nums[j] <= nums[i])
             {
                 j--;
             }
             swap(nums[i], nums[j]);
         }
+
         reverse(nums.begin() + i + 1, nums.end());
 
         // for example
