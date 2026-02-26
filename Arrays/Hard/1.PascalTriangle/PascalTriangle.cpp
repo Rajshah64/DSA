@@ -57,3 +57,21 @@ public:
 
 
 // For the first question we can use the same approach as the third question but we will only store the current row and the previous row. So we can optimize the space complexity to O(1).
+class Solution {
+public:
+    vector<int> getRow(int rowIndex) {
+        int ans=1;
+        int n=rowIndex+1;
+        vector<int> result;
+        result.push_back(ans);
+        for(int i=1;i<n;i++){
+            ans=ans* (n-i);
+            ans=ans/i;
+            result.push_back(ans);
+        }
+        return result;
+    }
+};
+//Time Complexity :- O(n)
+// Space Complexity:- O(1)
+// so how this works is that we are using the property of Pascal's triangle that is nCr = nC(r-1) * (n-r+1)/r to calculate the value at any position in the Pascal's triangle in O(r) time complexity. We are starting from the first element which is always 1 and then we are calculating the next element using the previous element and the formula. This way we are able to calculate the entire row in O(n) time complexity and O(1) space complexity.
