@@ -93,3 +93,6 @@ public:
 };
 // Time Complexity:- O(n)
 // Space Complexity:- O(n)
+
+// KEY CONCEPT
+prefixSum[j] - prefixSum[i] = target
