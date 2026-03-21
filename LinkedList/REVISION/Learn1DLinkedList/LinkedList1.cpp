@@ -112,6 +112,7 @@ bool SearchLL(int k, ListNode *head)
     }
     return false;
 }
+// Time Complexity of all above operations is O(n) in worst case, where n is the number of nodes in the linked list.
 
 int main()
 {
