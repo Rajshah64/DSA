@@ -1,5 +1,4 @@
 // Leetcode Question 19
-
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -10,34 +9,49 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+// class Solution {
+// public:
+//     ListNode* removeNthFromEnd(ListNode* head, int n) {
+//         if(head==nullptr) return nullptr;
+//         if(head->next ==nullptr && n==1) return nullptr;
+//         int cnt=0;
+//         ListNode* p=head;
+//         while(p){
+//             cnt++;
+//             p=p->next;
+//         }
+//         int newN=cnt-n;
+//         if(newN==0){
+//             head=head->next;
+//             return head;
+//         }
+//         p=head;
+//         for(int i=1;i<newN;i++){
+//             p=p->next;
+//         }
+//         p->next=p->next->next;
+//         return head;
+//     }
+// };
+
 class Solution
 {
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n)
     {
-        if (head == nullptr)
-            return nullptr;
-        if (head->next == nullptr && n == 1)
-            return nullptr;
-        int cnt = 0;
-        ListNode *p = head;
-        while (p)
-        {
-            cnt++;
-            p = p->next;
-        }
-        int newN = cnt - n;
-        if (newN == 0)
-        {
-            head = head->next;
-            return head;
-        }
-        p = head;
-        for (int i = 1; i < newN; i++)
+        ListNode *dummy = new ListNode(0, head);
+        ListNode *p = dummy;
+        ListNode *s = dummy;
+        for (int i = 0; i < n; i++)
         {
             p = p->next;
         }
-        p->next = p->next->next;
-        return head;
+        while (p->next)
+        {
+            p = p->next;
+            s = s->next;
+        }
+        s->next = s->next->next;
+        return dummy->next;
     }
 };
